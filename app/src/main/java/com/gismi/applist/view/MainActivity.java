@@ -1,8 +1,10 @@
-package com.gismi.applist;
+package com.gismi.applist.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.gismi.applist.R;
 
 public class MainActivity extends AppCompatActivity {
 

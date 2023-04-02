@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:textAlignment="center"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
 
     <TextView
@@ -87,7 +87,7 @@
         android:textColor="#4A148C"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
-        app:layout_constraintVertical_bias="0.238"
+        app:layout_constraintVertical_bias="0.047"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -97,9 +97,9 @@
         android:layout_height="55dp"
         android:layout_margin="16dp"
         android:text="@string/text_hint_edit_salvar"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="538dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="536dp" />
 
     <Button
         android:id="@+id/button2"
@@ -111,8 +111,8 @@
         android:textColor="#4A148C"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
-        app:layout_constraintVertical_bias="0.238"
+        app:layout_constraintVertical_bias="0.047"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="227dp" />
+        tools:layout_editor_absoluteX="300dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
