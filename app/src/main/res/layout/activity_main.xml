@@ -18,9 +18,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <EditText
         android:id="@+id/editTextTextPersonName8"
@@ -81,38 +82,39 @@
         android:id="@+id/button"
         android:layout_width="95dp"
         android:layout_height="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="36dp"
         android:background="@color/corBotoes"
         android:text="@string/text_button_limpar"
         android:textColor="#4A148C"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
-        app:layout_constraintVertical_bias="0.047"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="311dp"
         android:layout_height="55dp"
-        android:layout_margin="16dp"
-        android:text="@string/text_hint_edit_salvar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="536dp" />
+
+        android:layout_marginBottom="16dp"
+        android:text="@string/text_hint_edit_enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="95dp"
         android:layout_height="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="36dp"
         android:background="@color/corBotoes"
         android:text="@string/text_button_salvar"
         android:textColor="#4A148C"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
-        app:layout_constraintVertical_bias="0.047"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="300dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
