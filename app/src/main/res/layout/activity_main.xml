@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:paddingTop="15dp"
     android:textAlignment="center"
     tools:context=".view.MainActivity">
 
@@ -81,40 +83,54 @@
     <Button
         android:id="@+id/button"
         android:layout_width="95dp"
-        android:layout_height="64dp"
+        android:layout_height="62dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="36dp"
-        android:background="@color/corBotoes"
+        android:layout_marginBottom="52dp"
+        android:background="#0A8E9F"
         android:text="@string/text_button_limpar"
-        android:textColor="#4A148C"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="311dp"
+        android:layout_width="355dp"
         android:layout_height="55dp"
 
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="316dp"
         android:text="@string/text_hint_edit_enviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,VisualLintButtonSize" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="95dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="36dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="52dp"
         android:background="@color/corBotoes"
         android:text="@string/text_button_salvar"
-        android:textColor="#4A148C"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
