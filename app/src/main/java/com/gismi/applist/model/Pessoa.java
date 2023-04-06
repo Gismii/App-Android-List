@@ -7,6 +7,10 @@ public class Pessoa {
     private String cursoDesejado;
     private String numeroTelefone;
 
+
+    public Pessoa(){
+
+    }
     public String getPrimeiroNome() {
         return primeiroNome;
     }
@@ -39,11 +43,13 @@ public class Pessoa {
         this.numeroTelefone = numeroTelefone;
     }
 
-
-
-    public Pessoa(){
-
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "primeiroNome='" + primeiroNome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cursoDesejado='" + cursoDesejado + '\'' +
+                ", numeroTelefone='" + numeroTelefone + '\'' +
+                '}';
     }
-
-
 }
