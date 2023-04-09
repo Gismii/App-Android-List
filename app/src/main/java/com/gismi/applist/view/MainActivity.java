@@ -55,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         dadosPessoa += "Numero Telefone: ";
         dadosPessoa += pessoa.getNumeroTelefone();
 
+        editPrimeiroNome.setText(pessoa.getPrimeiroNome());
+        editSobreNome.setText(pessoa.getSobrenome());
+        editCursoDsesejado.setText(pessoa.getCursoDesejado());
+        editTelefoneDeConatato.setText(pessoa.getNumeroTelefone());
+
 
 
         Log.i( "POOAndroid", pessoa.toString());
