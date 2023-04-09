@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/editPrimeiroNome"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -39,7 +39,7 @@
         tools:layout_editor_absoluteX="28dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/editSobreNome"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -47,12 +47,12 @@
         android:hint="@string/text_hint_edit_sobrenome"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
+        app:layout_constraintTop_toBottomOf="@+id/editPrimeiroNome"
         tools:ignore="VisualLintTextFieldSize"
         tools:layout_editor_absoluteX="127dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/editCursoDsesejado"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -60,12 +60,12 @@
         android:hint="@string/text_hint_edit_curso"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7"
+        app:layout_constraintTop_toBottomOf="@+id/editSobreNome"
         tools:ignore="VisualLintTextFieldSize"
         tools:layout_editor_absoluteX="85dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/editTelefoneDeConatato"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -74,14 +74,14 @@
         android:hint="@string/text_hint_edit_telefone_de_contato"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
+        app:layout_constraintTop_toBottomOf="@+id/editCursoDsesejado"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="VisualLintTextFieldSize"
         tools:layout_editor_absoluteX="16dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLimpar"
         android:layout_width="95dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
@@ -90,12 +90,12 @@
         android:text="@string/text_button_limpar"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonEnviar"
         android:layout_width="355dp"
         android:layout_height="55dp"
 
@@ -108,7 +108,7 @@
         tools:ignore="MissingConstraints,VisualLintButtonSize" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonSalvar"
         android:layout_width="95dp"
         android:layout_height="62dp"
         android:layout_marginEnd="20dp"
@@ -117,7 +117,7 @@
         android:text="@string/text_button_salvar"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
 

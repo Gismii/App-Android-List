@@ -3,6 +3,7 @@ package com.gismi.applist.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.gismi.applist.R;
 import com.gismi.applist.model.Pessoa;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
 
     String dadosPessoa;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         dadosPessoa += "Numero Telefone: ";
         dadosPessoa += pessoa.getNumeroTelefone();
 
-
+        Log.i( "POOAndroid", pessoa.toString());
 
     }
 }
