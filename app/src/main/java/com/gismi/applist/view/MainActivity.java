@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.gismi.applist.R;
 import com.gismi.applist.model.Pessoa;
@@ -32,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         pessoa = new Pessoa();
-        pessoa.setPrimeiroNome("Gismi");
+        /*pessoa.setPrimeiroNome("Gismi");
         pessoa.setSobrenome("Guimaraes");
         pessoa.setCursoDesejado("Android");
-        pessoa.setNumeroTelefone("48996409838");
+        pessoa.setNumeroTelefone("48996409838");*/
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobreNome = findViewById(R.id.editSobreNome);
@@ -60,8 +62,48 @@ public class MainActivity extends AppCompatActivity {
         editCursoDsesejado.setText(pessoa.getCursoDesejado());
         editTelefoneDeConatato.setText(pessoa.getNumeroTelefone());
 
+//        Criando os metodos de ação com os buttons do aplicativos
+
+        buttonLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                editPrimeiroNome.setText("");
+                editSobreNome.setText("");
+                editTelefoneDeConatato.setText("");
+                editCursoDsesejado.setText("");
+
+            }
+
+        });
+
+        buttonEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this, "Volte Sempre", Toast. LENGTH_LONG).show();
+                finish();
+
+            }
+        });
+
+        buttonSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
+                pessoa.setSobrenome(editSobreNome.getText().toString());
+                pessoa.setCursoDesejado(editCursoDsesejado.getText().toString());
+                pessoa.setNumeroTelefone(editTelefoneDeConatato.getText().toString());
+
+                Toast.makeText(MainActivity.this, "Salvo"+pessoa.toString(), Toast. LENGTH_LONG).show();
 
 
+            }
+        });
+
+
+        //Para debug, serve como etiqueta dos objetos instanciados.
         Log.i( "POOAndroid", pessoa.toString());
 
     }
