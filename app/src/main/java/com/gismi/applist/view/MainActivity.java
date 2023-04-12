@@ -10,9 +10,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gismi.applist.R;
+import com.gismi.applist.controller.PessoaController;
 import com.gismi.applist.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
+
+    PessoaController controller;
 
     Pessoa pessoa;
 
@@ -33,8 +36,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pessoa = new Pessoa();
+        controller = new PessoaController();
+        controller.toString();
 
+
+        pessoa = new Pessoa();
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobreNome = findViewById(R.id.editSobreNome);
@@ -94,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setNumeroTelefone(editTelefoneDeConatato.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo"+pessoa.toString(), Toast. LENGTH_LONG).show();
+
+                controller.salvar(pessoa);
 
 
             }
