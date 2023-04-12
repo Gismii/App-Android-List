@@ -34,10 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         pessoa = new Pessoa();
-        /*pessoa.setPrimeiroNome("Gismi");
-        pessoa.setSobrenome("Guimaraes");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setNumeroTelefone("48996409838");*/
+
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobreNome = findViewById(R.id.editSobreNome);
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         editCursoDsesejado.setText(pessoa.getCursoDesejado());
         editTelefoneDeConatato.setText(pessoa.getNumeroTelefone());
 
-//        Criando os metodos de ação com os buttons do aplicativos
+
 
         buttonLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,10 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        //Para debug, serve como etiqueta dos objetos instanciados.
-        Log.i( "POOAndroid", pessoa.toString());
 
     }
 }
