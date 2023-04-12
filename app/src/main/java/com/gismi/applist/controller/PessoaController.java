@@ -1,4 +1,4 @@
 package com.gismi.applist.controller;
 
-public class Controller {
+public class PessoaController {
 }
