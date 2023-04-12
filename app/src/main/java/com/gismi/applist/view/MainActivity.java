@@ -2,6 +2,7 @@ package com.gismi.applist.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,9 @@ import com.gismi.applist.controller.PessoaController;
 import com.gismi.applist.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
+
+    SharedPreferences preferences;
+    public static final String NOME_PREFERENCES ="prefe_listavip";
 
     PessoaController controller;
 
@@ -35,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        preferences = getSharedPreferences(NOME_PREFERENCES,0);
+        SharedPreferences.Editor listaVip = preferences.edit();
 
         controller = new PessoaController();
         controller.toString();
@@ -100,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setNumeroTelefone(editTelefoneDeConatato.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo"+pessoa.toString(), Toast. LENGTH_LONG).show();
+
+                listaVip.putString("primeiroNome", pessoa.getPrimeiroNome());
+                listaVip.putString("Sobrenome", pessoa.getSobrenome());
+                listaVip.putString("CursoDesejado", pessoa.getCursoDesejado());
+                listaVip.putString("numeroTelefone", pessoa.getNumeroTelefone());
+                listaVip.apply();
 
                 controller.salvar(pessoa);
 
