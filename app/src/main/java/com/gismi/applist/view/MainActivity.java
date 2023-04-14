@@ -19,12 +19,10 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences preferences;
     public static final String NOME_PREFERENCES ="prefe_listavip";
 
+
+
     PessoaController controller;
-
     Pessoa pessoa;
-
-    String dadosPessoa;
-
     EditText editPrimeiroNome;
     EditText editSobreNome;
     EditText editCursoDsesejado;
@@ -42,35 +40,32 @@ public class MainActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences(NOME_PREFERENCES,0);
         SharedPreferences.Editor listaVip = preferences.edit();
+        preferences = getSharedPreferences(NOME_PREFERENCES, 0);
+
+
 
         controller = new PessoaController();
         controller.toString();
 
-
         pessoa = new Pessoa();
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome","NA"));
+        pessoa.setSobrenome(preferences.getString("Sobrenome",""));
+        pessoa.setCursoDesejado(preferences.getString("CursoDesejado","NA"));
+        pessoa.setNumeroTelefone(preferences.getString("numeroTelefone","NA"));
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobreNome = findViewById(R.id.editSobreNome);
         editCursoDsesejado = findViewById(R.id.editCursoDsesejado);
         editTelefoneDeConatato = findViewById(R.id.editTelefoneDeConatato);
 
-        buttonLimpar =findViewById(R.id.buttonLimpar);
-        buttonEnviar =findViewById(R.id.buttonEnviar);
-        buttonSalvar =findViewById(R.id.buttonSalvar);
-
-        dadosPessoa = "Primeiro nome: ";
-        dadosPessoa += pessoa.getPrimeiroNome();
-        dadosPessoa += " Sobre nome: ";
-        dadosPessoa += pessoa.getSobrenome();
-        dadosPessoa += "Curso desejado: ";
-        dadosPessoa += pessoa.getCursoDesejado();
-        dadosPessoa += "Numero Telefone: ";
-        dadosPessoa += pessoa.getNumeroTelefone();
-
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editSobreNome.setText(pessoa.getSobrenome());
         editCursoDsesejado.setText(pessoa.getCursoDesejado());
         editTelefoneDeConatato.setText(pessoa.getNumeroTelefone());
+
+        buttonLimpar =findViewById(R.id.buttonLimpar);
+        buttonEnviar =findViewById(R.id.buttonEnviar);
+        buttonSalvar =findViewById(R.id.buttonSalvar);
 
 
 
@@ -114,10 +109,13 @@ public class MainActivity extends AppCompatActivity {
                 listaVip.putString("numeroTelefone", pessoa.getNumeroTelefone());
                 listaVip.apply();
 
+
+
                 controller.salvar(pessoa);
 
 
             }
+
         });
 
     }
