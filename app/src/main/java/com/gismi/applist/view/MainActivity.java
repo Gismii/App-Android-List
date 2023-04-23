@@ -17,6 +17,7 @@ import com.gismi.applist.model.Pessoa;
 public class MainActivity extends AppCompatActivity {
 
     SharedPreferences preferences;
+    SharedPreferences.Editor listaVip;
     public static final String NOME_PREFERENCES ="prefe_listavip";
 
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         preferences = getSharedPreferences(NOME_PREFERENCES,0);
-        SharedPreferences.Editor listaVip = preferences.edit();
+        listaVip = preferences.edit();
         preferences = getSharedPreferences(NOME_PREFERENCES, 0);
 
 
@@ -77,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 editSobreNome.setText("");
                 editTelefoneDeConatato.setText("");
                 editCursoDsesejado.setText("");
+                listaVip.clear();
+                listaVip.apply();
 
             }
 
@@ -108,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 listaVip.putString("CursoDesejado", pessoa.getCursoDesejado());
                 listaVip.putString("numeroTelefone", pessoa.getNumeroTelefone());
                 listaVip.apply();
-
 
 
                 controller.salvar(pessoa);
