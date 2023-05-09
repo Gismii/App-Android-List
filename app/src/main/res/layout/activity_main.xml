@@ -80,6 +80,31 @@
         tools:ignore="VisualLintTextFieldSize"
         tools:layout_editor_absoluteX="16dp" />
 
+    <TextView
+    android:id="@+id/txtListaSpinner"
+    android:layout_width="195dp"
+    android:layout_height="22dp"
+    android:text="Selecione um curso.."
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/spinner"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTelefoneDeConatato" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="389dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefoneDeConatato" />
+
+
+
     <Button
         android:id="@+id/buttonLimpar"
         android:layout_width="95dp"
@@ -121,28 +146,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="389dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefoneDeConatato" />
-
-    <TextView
-        android:id="@+id/txtListaSpinner"
-        android:layout_width="195dp"
-        android:layout_height="22dp"
-        android:text="Selecione um curso.."
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefoneDeConatato" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
