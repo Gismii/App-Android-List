@@ -11,14 +11,21 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gismi.applist.R;
+import com.gismi.applist.controller.CursoController;
 import com.gismi.applist.controller.PessoaController;
+import com.gismi.applist.model.Curso;
 import com.gismi.applist.model.Pessoa;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    CursoController cursoController;
     PessoaController controller;
     Pessoa pessoa;
+
+    Curso curso;
+    List<Curso> listaDeCursos;
     EditText editPrimeiroNome;
     EditText editSobreNome;
     EditText editCursoDsesejado;
@@ -35,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
-
         controller = new PessoaController(MainActivity.this);
         controller.toString();
+
+        curso = new Curso();
+        cursoController = new CursoController();
+        listaDeCursos = cursoController.getListaDeCursos();
 
         pessoa = new Pessoa();
         controller.buscar(pessoa);
