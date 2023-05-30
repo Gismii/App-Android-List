@@ -98,11 +98,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLimpar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTelefoneDeConatato" />
-
 
 
     <Button
@@ -110,7 +109,7 @@
         android:layout_width="95dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="96dp"
         android:background="#0A8E9F"
         android:text="@string/text_button_limpar"
         android:textColor="@color/white"
@@ -136,8 +135,8 @@
         android:id="@+id/buttonSalvar"
         android:layout_width="95dp"
         android:layout_height="62dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="96dp"
         android:background="@color/corBotoes"
         android:text="@string/text_button_salvar"
         android:textColor="#1B5E20"
@@ -145,7 +144,6 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

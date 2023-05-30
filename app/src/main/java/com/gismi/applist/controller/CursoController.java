@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CursoController {
-    private  List listCursos;
+    private List listCursos;
 
-    public List getListaDeCursos(){
+    public List getListaDeCursos() {
 
         listCursos = new ArrayList<Curso>();
 
@@ -23,6 +23,20 @@ public class CursoController {
 
         return listCursos;
 
+    }
+
+    public ArrayList<String> dadosParaSpinner() {
+
+        ArrayList<String> dados = new ArrayList<>();
+
+        for (int i = 0; i < getListaDeCursos().size(); i++) {
+
+            Curso objeto = (Curso) getListaDeCursos().get(i);
+            dados.add(objeto.getNomeDoCursoDesejado());
+
+        }
+
+        return  dados;
     }
 
 }
