@@ -25,6 +25,8 @@ public class CursoController {
 
     }
 
+
+    // Esse codigo poderá ser usado para criar outros spinner em outros projetos
     public ArrayList<String> dadosParaSpinner() {
 
         ArrayList<String> dados = new ArrayList<>();

@@ -6,8 +6,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.gismi.applist.R;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
 
     Curso curso;
-    List<Curso> listaDeCursos;
+    List<String> nomesDosCursos;
     EditText editPrimeiroNome;
     EditText editSobreNome;
     EditText editCursoDsesejado;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     Button buttonLimpar;
     Button buttonEnviar;
     Button buttonSalvar;
+
+    Spinner spinner;
 
 
 
@@ -46,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         controller.toString();
 
         curso = new Curso();
+
         cursoController = new CursoController();
-        listaDeCursos = cursoController.getListaDeCursos();
+        nomesDosCursos = cursoController.dadosParaSpinner();
 
         pessoa = new Pessoa();
         controller.buscar(pessoa);
@@ -57,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         editSobreNome = findViewById(R.id.editSobreNome);
         editCursoDsesejado = findViewById(R.id.editCursoDsesejado);
         editTelefoneDeConatato = findViewById(R.id.editTelefoneDeConatato);
+        spinner = findViewById(R.id.spinner);
+
 
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editSobreNome.setText(pessoa.getSobrenome());
@@ -67,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
         buttonEnviar =findViewById(R.id.buttonEnviar);
         buttonSalvar =findViewById(R.id.buttonSalvar);
 
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                cursoController.dadosParaSpinner());
+
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+
+        spinner.setAdapter(adapter);
 
 
         buttonLimpar.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+
+
 
     }
 }
