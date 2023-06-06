@@ -10,5 +10,6 @@
     <string name="text_button_salvar">Salvar</string>
     <string name="text_hint_edit_enviar">ENVIAR</string>
     <string name="selecione_um_curso">Selecione um curso..</string>
+    <string name="txt_selecione_um_curso" />
 
 </resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:textAlignment="center"
+    tools:context=".view.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/purple_200"
+                android:gravity="center_horizontal"
+                android:text="@string/text_titulo"
+                android:textColor="#373737"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editPrimeiroNome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="@string/text_hint_edit_primeiro_nome"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editSobreNome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="@string/text_hint_edit_sobrenome"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editCursoDsesejado"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:ems="10"
+                android:hint="@string/text_hint_edit_curso"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                tools:ignore="VisualLintTextFieldSize"
+                tools:layout_editor_absoluteX="85dp" />
+
+            <EditText
+                android:id="@+id/editTelefoneDeConatato"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="@string/text_hint_edit_telefone_de_contato"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+
+            <TextView
+                android:id="@+id/txtListaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/purple_200"
+                android:gravity="center_horizontal"
+                android:text="@string/selecione_um_curso"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonLimpar"
+                android:layout_width="95dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="#0A8E9F"
+                android:text="@string/text_button_limpar"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/buttonSalvar"
+                android:layout_width="95dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/corBotoes"
+                android:text="@string/text_button_salvar"
+                android:textColor="#1B5E20"
+                android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <Button
+                android:id="@+id/buttonEnviar"
+                android:layout_width="355dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/text_hint_edit_enviar" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
