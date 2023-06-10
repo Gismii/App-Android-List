@@ -120,16 +120,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Salvo"+pessoa.toString(), Toast. LENGTH_LONG).show();
 
 
-
-
                 controller.salvar(pessoa);
 
 
             }
 
         });
-
-
 
 
     }
