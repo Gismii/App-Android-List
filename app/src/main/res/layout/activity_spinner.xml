@@ -23,23 +23,27 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/purple_200"
                 android:gravity="center_horizontal"
+                android:rotationX="28"
+                android:shadowColor="#474444"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
                 android:text="@string/text_titulo"
-                android:textColor="#373737"
-                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editPrimeiroNome"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_margin="16dp"
                 android:ems="10"
                 android:hint="@string/text_hint_edit_primeiro_nome"
                 android:importantForAutofill="no"
@@ -49,13 +53,11 @@
                 android:id="@+id/editSobreNome"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_margin="16dp"
                 android:ems="10"
                 android:hint="@string/text_hint_edit_sobrenome"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"/>
 
             <EditText
                 android:id="@+id/editCursoDsesejado"
@@ -86,63 +88,70 @@
                 android:id="@+id/txtListaSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/purple_200"
                 android:gravity="center_horizontal"
+                android:rotationX="0"
+                android:shadowColor="#393636"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
                 android:text="@string/selecione_um_curso"
+                android:textColor="#040404"
                 android:textSize="20sp"
-                android:textStyle="bold"
-
-                />
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="wrap_content"
+                android:layout_width="359dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="28dp"
+                android:orientation="horizontal"
+                android:rotationX="0">
 
-            <Button
-                android:id="@+id/buttonLimpar"
-                android:layout_width="95dp"
-                android:layout_height="62dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:background="#0A8E9F"
-                android:text="@string/text_button_limpar"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                <Button
+                    android:id="@+id/buttonLimpar"
+                    android:layout_width="95dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="86dp"
+                    android:background="#0A8E9F"
+                    android:text="@string/text_button_limpar"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
 
-            <Button
-                android:id="@+id/buttonSalvar"
-                android:layout_width="95dp"
-                android:layout_height="62dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/corBotoes"
-                android:text="@string/text_button_salvar"
-                android:textColor="#1B5E20"
-                android:textStyle="bold" />
+                <Button
+                    android:id="@+id/buttonSalvar"
+                    android:layout_width="95dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="86dp"
+                    android:background="@color/purple_200"
+                    android:text="@string/text_button_salvar"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
             </androidx.appcompat.widget.LinearLayoutCompat>
+
             <Button
                 android:id="@+id/buttonEnviar"
                 android:layout_width="355dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="13dp"
                 android:layout_marginEnd="16dp"
+                android:rotationX="28"
                 android:text="@string/text_hint_edit_enviar" />
         </LinearLayout>
     </ScrollView>

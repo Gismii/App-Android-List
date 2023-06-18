@@ -10,7 +10,7 @@ import com.gismi.applist.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    public static final int TIME_OUT_SPLASH = 3000;
+    public static final int TIME_OUT_SPLASH = 6000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
