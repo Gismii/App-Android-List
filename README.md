@@ -1,4 +1,5 @@
 # App- Lista de Compra
+
 Desenvolvendo uma aplicação android/Java -  compativel apartir da versão 8.
 Apps Mobile moderno com o Android Studio em Java Kotlin SQLite Json API REST Web Services.
 
